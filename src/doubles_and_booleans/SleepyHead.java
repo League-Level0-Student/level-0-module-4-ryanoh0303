@@ -9,7 +9,7 @@ public class SleepyHead {
 
 	public static void main(String[] args) {
 
-		boolean isWeekday, isVacation;
+		boolean isWeekday, isVacation =true;
 
 		/* You MUST use the above boolean variables in your code */
 
@@ -32,9 +32,20 @@ public class SleepyHead {
 		} else {
 			isWeekday = true;
 		}
-		if(isVacation=true && isWeekday=true)
+		if(isWeekday==true && isVacation==true) {
+			System.out.println("sleep in");
+		}
+		else if(isWeekday==true) {
+			System.out.println("Get up lazybones");
+		}
+		else if(isVacation==true || isWeekday==false) {
+			System.out.println("Sleep in");
+		}
+		
+		else {
+			System.out.println("error");
+		}
 
-		System.out.println(isWeekday);
 		
 		/*
 		 * 
