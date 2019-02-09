@@ -30,16 +30,15 @@ void draw(){
      }
     else{
       fill(255,0,0);
-      
-    }
+     }
     ellipse(x,y,49,49);
-    if(abs(creeperx-x)<100){
+    if(abs(creeperx-x)<250){
     near=true;
     }
     else{
     near=false;
     }  
-    if(abs(creepery-y)<100){
+    if(abs(creepery-y)<250){
    near2=true; 
     
   }
@@ -50,10 +49,13 @@ void draw(){
   }
   
   if(near2==true && near==true){
+    creeperx=int(random(400));
+    creepery=int(random(400));
     background(minecraft);
-    image(creeper,(int)random(400),(int)random(400));
     near2=false;
     near=false;
+    image(creeper,creeperx,creepery);
+    
     
     
     
